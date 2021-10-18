@@ -24,7 +24,6 @@ public class SymbolTable {
     */
     public String addElement(String key){
         int i = hashFunction(key);
-
         // Linear probing for the collision resolution
         while (hashTable[i] != null) {
             if (hashTable[i].equals(key)) {
@@ -41,27 +40,25 @@ public class SymbolTable {
 
     /*
         searchElement:
-            we search for an element in the hash table by compution the hash value and searching for the element in
+            we search for an element in the hash table by computing the hash value and searching for the element in
             that position. if we don't find it in that position we increase until the element is found, if it's not found
-            -1 is returned
+            "Element not found" string is returned
             input <- key
-            output -> if we reached the end of the hashTable: -1
-                      if the element is found: position
+            output -> if we reached the end of the hashTable: "Element not found"
+                      if the element is found: "Element" + key + "position" + pos
      */
-    public int searchElement(String key){
+    public String searchElement(String key){
         int i = hashFunction(key);
-
         while (hashTable[i] != null) {
             if (hashTable[i].equals(key)) {
-                return i;
-            }
-            if(i>=size-1){
-                return -1;
+                return "Element " + hashTable[i] + " found at position " + i;
             }
             i++;
+            if (i>=size){
+                i = 0;
+            }
         }
-
-        return -1;
+        return "Element not found";
     }
 
     public void printAll(){
