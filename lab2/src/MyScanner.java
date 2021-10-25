@@ -63,17 +63,19 @@ public class MyScanner {
         return pattern.matcher(character).matches();
     }
 
-    public boolean isSeparator(String separator) {
-        return separators.contains(separator);
-    }
-
-    public boolean isOperator(String operator) {
-        return operators.contains(operator);
-    }
-
     public boolean isNumber(String integer) {
         var pattern = Pattern.compile("[-]?\\\\d+");
         return pattern.matcher(integer).matches();
     }
+
+    public boolean isStringConst(String st){
+        String stringConstant = "^\"[a-zA-Z0-9 ]*\"$";
+        return st.matches(stringConstant);
+    }
+
+    private boolean isBooleanConstant(String bool){
+        return bool.equals("true") || bool.equals("false");
+    }
+
 
 }
