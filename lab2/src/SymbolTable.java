@@ -22,12 +22,12 @@ public class SymbolTable {
             output -> if the element is already in the hash table: "Element is already added on position " {and the position}
                       if the element is not in the hash table: "Element added on position " {and the position}
     */
-    public String addElement(String key){
+    public boolean addElement(String key){
         int i = hashFunction(key);
         // Linear probing for the collision resolution
         while (hashTable[i] != null) {
             if (hashTable[i].equals(key)) {
-                return "Element is already added on position " + i;
+                return false;
             }
             i++;
             if (i>=size){
@@ -35,7 +35,7 @@ public class SymbolTable {
             }
         }
         hashTable[i]=key;
-        return "Element added on position " + i;
+        return true;
     }
 
     /*
@@ -47,23 +47,33 @@ public class SymbolTable {
             output -> if we reached the end of the hashTable: "Element not found"
                       if the element is found: "Element" + key + "position" + pos
      */
-    public String searchElement(String key){
+    public int searchElement(String key){
         int i = hashFunction(key);
         while (hashTable[i] != null) {
             if (hashTable[i].equals(key)) {
-                return "Element " + hashTable[i] + " found at position " + i;
+                return i;
             }
             i++;
             if (i>=size){
                 i = 0;
             }
         }
-        return "Element not found";
+        return -1;
     }
 
     public void printAll(){
         for (int i=0;i<hashTable.length;i++){
             System.out.println( "position: " + i + " element: "+hashTable[i]);
         }
+    }
+
+    @Override
+    public String toString(){
+        String res = "Pos  Token\n";
+        for (int i=0; i<this.size; i++){
+            if (this.hashTable[i] != null)
+                res += i + " " + this.hashTable[i]+ "\n";
+        }
+        return res;
     }
 }
