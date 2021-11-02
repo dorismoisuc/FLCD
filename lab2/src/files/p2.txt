@@ -1,0 +1,15 @@
+number a=1
+number b=2
+number c =1
+number delta
+number x1
+number x2
+number radicalFromDelta
+
+delta=b^2-4*{a*c}
+
+radicalFromDelta= ^delta
+x1={-b+radicalFromDelta}/2*a
+x2={-b-radicalFromDelta}/2*a
+
+write->"the solutions are"->x1->x2

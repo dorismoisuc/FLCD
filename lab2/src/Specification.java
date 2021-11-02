@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -6,9 +7,9 @@ import java.util.regex.Pattern;
 
 public class Specification {
 
-    private final List<String> operators = Arrays.asList("+","-","*","/","<",">","<=",">=","=","!=","^","$","++","--","%","->","<-");
-    private final List<String> separators = Arrays.asList("[","]","{","}","(",")",":"," ","\n");
-    private final List<String>  reservedWords = Arrays.asList("number","write","read","if","then","else","else if","until","while","for","string","char");
+    private final String[] operators = {"+","-","*","/","<",">","<=",">=","=","!=","^","$","++","--","%","->","<-","&","&&"};
+    private final String[] separators = {"{","}","(",")",":"," ","\n"};
+    private final String[] reservedWords = {"number","write","read","if","then","else","else if","until","while","for","string","char"};
     private final HashMap<String,Integer> codification;
 
     public Specification() {
@@ -45,41 +46,16 @@ public class Specification {
         return codification;
     }
 
-
-    public boolean operator(String operator){
-        return operators.contains(operator);
-    }
-
-    public boolean separator(String separator){
-        return separators.contains(separator);
-    }
-
-    public boolean reservedWord(String reservedWord){
-        return reservedWords.contains(reservedWord);
-    }
-
-    public boolean isStringANumber(String number){
-        Pattern pattern = Pattern.compile("[-+]?[0-9]*\\\\.?[0-9]+$");
-        Matcher matcher = pattern.matcher(number);
-        return matcher.matches();
-    }
-
-    public boolean isStringAChar(String charac){
-        Pattern pattern = Pattern.compile("^'[a-zA-Z0-9]'$");
-        Matcher matcher = pattern.matcher(charac);
-        return matcher.matches();
-    }
-
     public List<String> getOperators(){
-        return this.operators;
+        return Arrays.asList(operators);
     }
 
     public List<String> getSeparators(){
-        return this.separators;
+        return Arrays.asList(separators);
     }
 
     public List<String> getRw(){
-        return this.reservedWords;
+        return Arrays.asList(reservedWords);
     }
 
 

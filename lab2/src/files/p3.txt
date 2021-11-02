@@ -1,0 +1,11 @@
+number n
+number sum=0
+
+write->"give the number for the sum"  
+read<-n
+
+until n >= 0:
+    sum=sum+n
+    n=n-1
+
+write->"the sum is"->sum

@@ -1,0 +1,72 @@
+Token RW number on position -1 code 28
+Token IDENTIFIER a on position 47 code 0
+Token RW number on position -1 code 28
+Token IDENTIFIER b on position 48 code 0
+Token RW number on position -1 code 28
+
+Lexical ERROR at line → 2. Invalid token → 5a
+
+Token RW number on position -1 code 28
+Token IDENTIFIER max on position 26 code 0
+Token RW write on position -1 code 29
+Token OPERATOR -> on position -1 code 24
+Token CONST "give 3 numbers for calculating the maximum between them" on position 15 code 1
+Token RW read on position -1 code 30
+Token OPERATOR <- on position -1 code 25
+Token IDENTIFIER a on position 47 code 0
+Token RW read on position -1 code 30
+Token OPERATOR <- on position -1 code 25
+Token IDENTIFIER b on position 48 code 0
+Token RW read on position -1 code 30
+Token OPERATOR <- on position -1 code 25
+Token IDENTIFIER c on position 49 code 0
+Token RW if on position -1 code 31
+
+Lexical ERROR at line → 8. Invalid token → [
+
+Token SEPARATOR { on position -1 code 2
+Token IDENTIFIER a on position 47 code 0
+Token OPERATOR > on position -1 code 14
+Token IDENTIFIER b on position 48 code 0
+Token SEPARATOR } on position -1 code 3
+Token OPERATOR & on position -1 code 26
+Token SEPARATOR { on position -1 code 2
+Token IDENTIFIER a on position 47 code 0
+Token OPERATOR > on position -1 code 14
+Token IDENTIFIER c on position 49 code 0
+Token SEPARATOR } on position -1 code 3
+
+Lexical ERROR at line → 8. Invalid token → ]
+
+Token SEPARATOR : on position -1 code 6
+Token RW then on position -1 code 32
+Token IDENTIFIER max on position 26 code 0
+Token OPERATOR = on position -1 code 17
+Token IDENTIFIER a on position 47 code 0
+Token RW else on position -1 code 33
+Token RW if on position -1 code 31
+Token SEPARATOR { on position -1 code 2
+Token IDENTIFIER b on position 48 code 0
+Token OPERATOR > on position -1 code 14
+Token IDENTIFIER a on position 47 code 0
+Token SEPARATOR } on position -1 code 3
+Token OPERATOR & on position -1 code 26
+Token SEPARATOR { on position -1 code 2
+Token IDENTIFIER b on position 48 code 0
+Token OPERATOR > on position -1 code 14
+Token IDENTIFIER c on position 49 code 0
+Token SEPARATOR } on position -1 code 3
+Token SEPARATOR : on position -1 code 6
+Token RW then on position -1 code 32
+Token IDENTIFIER max on position 26 code 0
+Token OPERATOR = on position -1 code 17
+Token IDENTIFIER b on position 48 code 0
+Token RW else on position -1 code 33
+Token IDENTIFIER max on position 26 code 0
+Token OPERATOR = on position -1 code 17
+Token IDENTIFIER c on position 49 code 0
+Token RW write on position -1 code 29
+Token OPERATOR -> on position -1 code 24
+Token CONST "the max is" on position 0 code 1
+Token OPERATOR -> on position -1 code 24
+Token IDENTIFIER max on position 26 code 0

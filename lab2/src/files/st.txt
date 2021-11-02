@@ -1,0 +1,10 @@
+
+SYMBOL TABLE
+Position             Token 
+0             "the max is"
+15             "give 3 numbers for calculating the maximum between them"
+26             max
+47             a
+48             b
+49             c
+

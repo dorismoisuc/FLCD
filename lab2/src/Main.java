@@ -1,8 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        var symbolTable = new SymbolTable(5);
-
-
+        LexicalScanner lexicalScanner = new LexicalScanner();
+        lexicalScanner.scan("lab2/src/files/p1err.txt");
     }
 }
