@@ -3,7 +3,9 @@ Token IDENTIFIER a on position 47 code 0
 Token RW number on position -1 code 28
 Token IDENTIFIER b on position 48 code 0
 Token RW number on position -1 code 28
-Token IDENTIFIER c on position 49 code 0
+
+Lexical ERROR at line → 2. Invalid token → 5a
+
 Token RW number on position -1 code 28
 Token IDENTIFIER max on position 26 code 0
 Token RW write on position -1 code 29
@@ -19,6 +21,9 @@ Token RW read on position -1 code 30
 Token OPERATOR <- on position -1 code 25
 Token IDENTIFIER c on position 49 code 0
 Token RW if on position -1 code 31
+
+Lexical ERROR at line → 8. Invalid token → [
+
 Token SEPARATOR { on position -1 code 2
 Token IDENTIFIER a on position 47 code 0
 Token OPERATOR > on position -1 code 14
@@ -30,6 +35,9 @@ Token IDENTIFIER a on position 47 code 0
 Token OPERATOR > on position -1 code 14
 Token IDENTIFIER c on position 49 code 0
 Token SEPARATOR } on position -1 code 3
+
+Lexical ERROR at line → 8. Invalid token → ]
+
 Token SEPARATOR : on position -1 code 6
 Token RW then on position -1 code 32
 Token IDENTIFIER max on position 26 code 0
