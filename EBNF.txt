@@ -1,0 +1,27 @@
+Q (states):
+
+Q = state {state}
+state = letter{number}
+letter = "a" | "b" | ... | "z" | "A" | "B" | ... | "Z"
+number = nonzero-digit { "0" | nonzero_digit }
+nonzero_digit = "1" | ... | "9"
+
+E (alphabet):
+
+E = elem {E}
+elem = letter | number
+
+q0 (initial state):
+
+q0 = state
+
+F (final states):
+
+F = state {state}
+
+S (transitions):
+
+S =
+       "(" state "," symbol ")" "->" state "\n"
+       {S}
+
